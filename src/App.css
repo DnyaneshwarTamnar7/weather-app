@@ -1,0 +1,37 @@
+.App {
+  text-align: center;
+  margin-top: 10px;
+}
+.App h1 {
+  text-align: start;
+  margin-left: 100px;
+  font-weight: bolder;
+  color: #ffffff;
+}
+.serach-msg {
+  text-align: center;
+}
+.form-control {
+  width: 500px;
+  margin-left: 450px;
+  color: black;
+  font-weight: bold;
+  background: transparent;
+}
+.form-control:focus,
+.form-control:active {
+     background: transparent;
+}
+
+body {
+  background-image: url(w1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 351px) {
+  .form-control {
+    width: 250px;
+    margin: auto;
+  }
+}

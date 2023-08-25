@@ -1,0 +1,55 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.weather-page-sub-section{
+    background-color: #e0eff44d;
+    width: 200px;
+    height: 187px;
+    padding: 20px;
+    opacity: 1;
+    border-radius: 25px;
+    margin: 10px 0px 0px 70px;
+    box-shadow: 0px 0px 46px -1px rgba(0,0,0,0.45),
+                25px 0px 20px -20px rgba(0,0,0,0.45),
+                0px 25px 20px -20px rgba(0,0,0,0.45),
+                -25px 0px 20px -20px rgba(0,0,0,0.45);
+}
+.weather-page-sub-section img{
+    width: 85px;
+}
+.weather-page-sub-section div p {
+    margin-left: 20px;
+}
+.weather-page-sub-section p {
+    font-size: 15px;
+}
+
+@media screen and (max-width:351px) {
+    .weather-page-sub-section{
+        width: 140px;
+        height: 150px;
+        padding: 10px;
+        opacity: 1;
+        border-radius: 25px;
+        margin: auto;
+        margin-top: 30px;
+        box-shadow: none;
+    }
+
+    .weather-page-sub-section img{
+        width: 30px;
+        margin-top: 10px;
+    }
+    .weather-page-sub-section div p {
+        margin-left: 30px;
+        margin-top: 15px;
+    }
+    .weather-page-sub-section h5 {
+        margin-left: 50px;
+        margin-top: 0px;
+    }
+    .weather-page-sub-section p {
+        font-size: 13px;
+    }
+
+}
