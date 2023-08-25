@@ -24,7 +24,7 @@
     font-size: 15px;
 }
 
-@media screen and (max-width:351px) {
+@media only screen and (max-width:400px) {
     .weather-page-sub-section{
         width: 140px;
         height: 150px;
