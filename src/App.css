@@ -29,7 +29,7 @@ body {
   background-repeat: no-repeat;
 }
 
-@media only screen and (max-width: 400px) {
+@media screen and (max-width: 400px) {
   .form-control {
     width: 250px;
     margin: auto;
