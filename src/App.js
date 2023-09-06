@@ -1,11 +1,11 @@
 import './App.css';
-import { useState} from "react";
+import { useState, useRef} from "react";
 import axios from 'axios';
 import WeatherPage from './WeatherPage';
 
 function App() {
     const [data, setData] = useState();
-    const [newCity, setNewCity] = useState();
+    const newCity = useRef();
     const apiCall = async (newCity) => {
     try {
         const res = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${newCity}&APPID=6557810176c36fac5f0db536711a6c52`);
@@ -16,12 +16,8 @@ function App() {
   }
 
 
-  const clearForm = () => {
-    setNewCity("")
-  }
   const handleClik = (e) => {
     e.preventDefault();
-    clearForm();
   }
 
   const getValidInput = () => {
@@ -29,7 +25,7 @@ function App() {
   }
 
   const handleSearch = () => {
-    apiCall(newCity);
+    apiCall(newCity.current.value);
   }
     return (
       <>
@@ -42,10 +38,7 @@ function App() {
             aria-describedby="addon-wrapping"
             type="text"
             placeholder="city name"
-            value={newCity}
-            onChange={(e)=> {
-              setNewCity(e.target.value);
-            }}
+            ref={newCity}
           />
           <button className='btn btn-success mt-2 mb-4' onClick={handleSearch} disabled={!getValidInput()}>Search</button>
           </form>
